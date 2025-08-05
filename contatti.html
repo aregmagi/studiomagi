@@ -1,0 +1,207 @@
+<!-- File: contatti.html -->
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
+        <title>Contatti - Dott.ssa Ester Magi</title>
+        <meta
+            name="description"
+            content="Contatta la Dott.ssa Ester Magi per prenotare una consulenza o richiedere informazioni. Riceve a Cernusco sul Naviglio oppure online.">
+            <link rel="stylesheet" href="css/style.css"/>
+            <script defer="defer" src="js/form.js"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap"
+                    rel="stylesheet"></head>
+                <body>
+
+                    <header class="site-header">
+                        <div class="container">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo7x5.png" alt="Logo Dott.ssa Ester Magi" class="logo-img">
+                                    Dott.ssa Ester Magi
+                                </a>
+                            </div>
+                            <nav class="main-nav">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="chi-sono.html">Chi sono</a>
+                                    </li>
+                                    <li>
+                                        <a href="servizi.html">Servizi</a>
+                                    </li>
+                                    <li>
+                                        <a href="contatti.html" class="active">Contatti</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </header>
+
+                    <section class="hero">
+                        <div class="container">
+                            <h1>Contatti</h1>
+                            <p>Ricevo su appuntamento in presenza o online</p>
+                        </div>
+                    </section>
+
+                    <section class="intro-section">
+                        <div class="container">
+                            <p>
+                                <strong>Email:</strong>
+                                <a href="mailto:studiomagi.ester@gmail.com">studiomagi.ester@gmail.com</a>
+                            </p>
+                            <p>
+                                <strong>Telefono:</strong>
+                                <a href="tel:+393386308450">+39 338 630 8450</a>
+                            </p>
+                            <p>
+                                <strong>WhatsApp:</strong>
+                                <a href="https://wa.me/393386308450" target="_blank">Clicca per scrivermi</a>
+                            </p>
+                            <p>Ricevo solo su appuntamento</p>
+                            <p>
+                                <strong>Indirizzo:</strong>
+                                Via G. Verdi 27A, Cernusco sul Naviglio, Milano, 20063, Italia</p>
+                        </div>
+                    </section>
+
+                    <section class="intro-section">
+                        <div class="container">
+                            <h2>Richiedi un contatto</h2>
+
+                            <form
+                                action="https://formspree.io/f/xanbpbkn"
+                                method="POST"
+                                id="contactForm"
+                                class="styled-form">
+                                <input
+                                    type="hidden"
+                                    name="_subject"
+                                    id="hiddenSubject"
+                                    value="Richiesta contatto">
+                                    <input
+                                        type="hidden"
+                                        name="_autoresponse"
+                                        value="Grazie per averci contattato. La dottoressa Ester Magi le risponderà al più presto.">
+
+                                        <div class="form-group">
+                                            <label for="nome">Nome e Cognome *</label>
+                                            <input type="text" id="nome" name="nome" required="required"></div>
+
+                                            <div class="form-group">
+                                                <label for="email">Email *</label>
+                                                <input type="email" id="email" name="email" required="required"></div>
+
+                                                <div class="form-group">
+                                                    <label for="telefono">Numero di telefono *</label>
+                                                    <input type="tel" id="telefono" name="telefono" required="required"></div>
+
+                                                    <div class="form-group">
+                                                        <label for="tipo-contatto">Motivo del contatto *</label>
+                                                        <select id="tipo-contatto" name="tipo-contatto" required="required">
+                                                            <option value="">-- Seleziona --</option>
+                                                            <option value="info">Richiesta informazioni</option>
+                                                            <option value="appuntamento">Richiesta appuntamento</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group condizionale" id="campo-messaggio">
+                                                        <label for="messaggio">Messaggio</label>
+                                                        <textarea id="messaggio" name="messaggio" rows="5"></textarea>
+                                                    </div>
+
+                                                    <div class="form-group condizionale" id="campo-modalita">
+                                                        <label for="modalita">Modalità preferita</label>
+                                                        <select id="modalita" name="modalita">
+                                                            <option value="">-- Seleziona --</option>
+                                                            <option value="presenza">In presenza</option>
+                                                            <option value="online">Online</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <!-- Prenotazione Google Calendar -->
+                                                    <div
+                                                        class="form-group condizionale"
+                                                        id="calendar-button-wrapper"
+                                                        style="display: none;">
+                                                        <link
+                                                            href="https://calendar.google.com/calendar/scheduling-button-script.css"
+                                                            rel="stylesheet">
+                                                            <script
+                                                                src="https://calendar.google.com/calendar/scheduling-button-script.js"
+                                                                async="async"></script>
+                                                            <div id="calendar-button-target"></div>
+                                                            <script>
+                                                                window.addEventListener('load', function () {
+                                                                    calendar
+                                                                        .schedulingButton
+                                                                        .load({
+                                                                            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2yH63V1Mpkyt' +
+                                                                                        'VTiH2wrBsuM6JHImzUKTJn_PmdD9JeI9YAMGw_S29wkuCB2pNEeQaAgifrv3bP?gv=true',
+                                                                            color: '#556b8d',
+                                                                            label: "Prenota un appuntamento",
+                                                                            target: document.getElementById("calendar-button-target")
+                                                                        });
+                                                                });
+                                                            </script>
+                                                        </div>
+
+                                                        <div class="form-group checkbox-group">
+                                                            <label>
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id="gdpr-checkbox"
+                                                                    name="gdpr"
+                                                                    disabled="disabled"
+                                                                    required="required">
+                                                                    ** Acconsento al trattamento dei miei dati ai sensi del GDPR *
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div
+                                                                    class="g-recaptcha"
+                                                                    data-sitekey="6LdEkZsrAAAAAIOA9X_fkkSR1HtdD1cmPpmJ-0pe"></div>
+                                                            </div>
+
+                                                            <button type="submit" class="btn-primary">Invia</button>
+                                                        </form>
+
+                                                        <p class="note">* Campi obbligatori<br>
+                                                                ** Il presente campo potrà essere selezionato esclusivamente a seguito
+                                                                dell’avvenuto completamento della procedura di prenotazione dell’appuntamento
+                                                                mediante la finestra popup integrata con il servizio Google Calendar.</p>
+                                                        </div>
+                                                    </section>
+
+                                                    <footer class="site-footer">
+                                                        <div class="container">
+                                                            <p>&copy; 2025 Dott.ssa Ester Magi · Cernusco sul Naviglio (MI)</p>
+                                                            <p>
+                                                                <a href="privacy-policy.html">Privacy Policy</a>
+                                                            </p>
+                                                        </div>
+                                                    </footer>
+
+                                                    <script>
+                                                        document.addEventListener("DOMContentLoaded", function () {
+                                                            const gdprCheckbox = document.getElementById("gdpr-checkbox");
+
+                                                            // Aggiungi listener al bottone Google Calendar
+                                                            const calendarWrapper = document.getElementById("calendar-button-wrapper");
+                                                            calendarWrapper.addEventListener("click", function () {
+                                                                // Abilita la checkbox (l'utente ha almeno cliccato)
+                                                                gdprCheckbox.disabled = false;
+                                                            });
+                                                        });
+                                                    </script>
+
+                                                </body>
+                                            </html>
